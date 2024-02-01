@@ -716,7 +716,7 @@ void zclDIYRuZRT_ReportOnOff(void) {
 
     zcl_SendReportCmd(DIYRuZRT_ENDPOINT, &zclDIYRuZRT_DstAddr,
                       ZCL_CLUSTER_ID_GEN_ON_OFF, pReportCmd,
-                      ZCL_FRAME_CLIENT_SERVER_DIR, false, SeqNum++);
+                      ZCL_FRAME_SERVER_CLIENT_DIR, false, SeqNum++);
   }
 
   osal_mem_free(pReportCmd);
@@ -747,7 +747,7 @@ void zclDIYRuZRT_ReportTemp( void )
 
     zcl_SendReportCmd(DIYRuZRT_ENDPOINT, &zclDIYRuZRT_DstAddr,
                       ZCL_CLUSTER_ID_MS_TEMPERATURE_MEASUREMENT, pReportCmd,
-                      ZCL_FRAME_CLIENT_SERVER_DIR, false, SeqNum++);
+                      ZCL_FRAME_SERVER_CLIENT_DIR, false, SeqNum++);
   }
 
   osal_mem_free(pReportCmd);
